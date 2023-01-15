@@ -42,10 +42,24 @@ class AnalyticInfoCard extends StatelessWidget {
                   color: info.color!.withOpacity(0.1),
                   shape: BoxShape.circle,
                 ),
-                child: SvgPicture.asset(info.svgSrc!),
+                child: SvgPicture.asset(
+                  info.svgSrc!,
+                  color: info.color,
+                ),
               ),
             ],
-          )
+          ),
+          Text(
+            //Titles are shown inside the  Bottom GridView
+            info.title!,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: textColor,
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );
