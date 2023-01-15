@@ -6,19 +6,19 @@ import '../models/referal_info_model.dart';
 List analyticData = [
   AnalyticInfo(
     title: "Subscribers",
-    count: 720,
+    count: 620,
     svgSrc: "assets/icons/Subscribers.svg",
     color: primaryColor,
   ),
   AnalyticInfo(
     title: "Post",
-    count: 820,
+    count: 720,
     svgSrc: "assets/icons/Post.svg",
     color: purple,
   ),
   AnalyticInfo(
     title: "Pages",
-    count: 920,
+    count: 820,
     svgSrc: "assets/icons/Pages.svg",
     color: orange,
   ),
