@@ -1,4 +1,5 @@
 import 'package:admin_pannel/constants/constants.dart';
+import 'package:admin_pannel/constants/responsive.dart';
 import 'package:admin_pannel/screens/components/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -24,10 +25,11 @@ class DashboardContent extends StatelessWidget {
                 flex: 5,
                 child: AnalyticCards(),
               ),
-              Expanded(
-                flex: 2,
-                child: Container(),
-              ),
+              if (!Responsive.isMobile(context))
+                Expanded(
+                  flex: 2,
+                  child: Container(),
+                ),
             ],
           ),
         ],
