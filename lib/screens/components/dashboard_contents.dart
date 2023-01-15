@@ -4,6 +4,7 @@ import 'package:admin_pannel/screens/components/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 import 'analytic_cards.dart';
+import 'discussions.dart';
 
 class DashboardContent extends StatelessWidget {
   const DashboardContent({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class DashboardContent extends StatelessWidget {
               if (!Responsive.isMobile(context))
                 Expanded(
                   flex: 2,
-                  child: Container(),
+                  child: Discussions(),
                 ),
             ],
           ),
