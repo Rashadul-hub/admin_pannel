@@ -1,6 +1,7 @@
 import 'package:admin_pannel/constants/constants.dart';
 import 'package:admin_pannel/constants/responsive.dart';
 import 'package:admin_pannel/screens/components/custom_appbar.dart';
+import 'package:admin_pannel/screens/components/users.dart';
 import 'package:flutter/material.dart';
 
 import 'analytic_cards.dart';
@@ -21,11 +22,29 @@ class DashboardContent extends StatelessWidget {
             height: appPadding,
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 flex: 5,
-                child: AnalyticCards(),
+                child: Column(
+                  children: [
+                    AnalyticCards(),
+                    SizedBox(
+                      height: appPadding,
+                    ),
+                    Users(),
+                    if (Responsive.isMobile(context))
+                      SizedBox(
+                        height: appPadding,
+                      ),
+                    if (Responsive.isMobile(context)) Discussions(),
+                  ],
+                ),
               ),
+              if (!Responsive.isMobile(context))
+                SizedBox(
+                  width: appPadding,
+                ),
               if (!Responsive.isMobile(context))
                 Expanded(
                   flex: 2,
