@@ -25,3 +25,31 @@ class UsersByDevice extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
+          Container(
+            margin: EdgeInsets.all(appPadding),
+            padding: EdgeInsets.all(appPadding),
+            height: 230,
+            child: CustomPaint(
+              foregroundPainter: RadialPainter(
+                bgColor: textColor.withOpacity(0.1),
+                lineColor: primaryColor,
+                percent: 0.7,
+                width: 18.0,
+              ),
+              child: Center(
+                child: Text(
+                  '70%',
+                  style: TextStyle(
+                    color: textColor,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 36,
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
