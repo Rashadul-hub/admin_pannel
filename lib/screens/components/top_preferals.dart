@@ -39,3 +39,21 @@ class TopPreferals extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            height: appPadding,
+          ),
+          Expanded(
+            child: ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: referalData.length,
+              itemBuilder: (context, index) => ReferalInfoDetail(
+                info: referalData[index],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
