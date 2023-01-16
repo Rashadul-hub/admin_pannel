@@ -17,3 +17,17 @@ class RadialPainter extends CustomPainter {
   final double percent;
   final double width;
 
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint bgLine = Paint()
+      ..color = bgColor
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = width;
+
+    Paint coloredLine = Paint()
+      ..color = lineColor
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = width;
+
