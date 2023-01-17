@@ -31,13 +31,6 @@ class TopPreferals extends StatelessWidget {
                     color: textColor,
                   ),
                 ),
-              ),
-              Text(
-                'View All',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-                  color: textColor.withOpacity(0.5),
                 Text(
                   'View All',
                   style: TextStyle(
@@ -60,22 +53,9 @@ class TopPreferals extends StatelessWidget {
                   info: referalData[index],
                 ),
               ),
-            ],
-          ),
-          SizedBox(
-            height: appPadding,
-          ),
-          Expanded(
-            child: ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: referalData.length,
-              itemBuilder: (context, index) => ReferalInfoDetail(
-                info: referalData[index],
-              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
