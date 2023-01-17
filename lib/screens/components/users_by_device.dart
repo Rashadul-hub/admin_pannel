@@ -26,19 +26,78 @@ class UsersByDevice extends StatelessWidget {
                 fontSize: 15,
                 fontWeight: FontWeight.w700,
               ),
-              child: Center(
-                child: Text(
-                  '70%',
-                  style: TextStyle(
-                    color: textColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 36,
+            ),
+            Container(
+              margin: EdgeInsets.all(appPadding),
+              padding: EdgeInsets.all(appPadding),
+              height: 230,
+              child: CustomPaint(
+                foregroundPainter: RadialPainter(
+                  bgColor: textColor.withOpacity(0.1),
+                  lineColor: primaryColor,
+                  percent: 0.7,
+                  width: 18.0,
+                ),
+                child: Center(
+                  child: Text(
+                    '70%',
+                    style: TextStyle(
+                      color: textColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 36,
+                    ),
                   ),
                 ),
               ),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: appPadding),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.circle,
+                        color: primaryColor,
+                        size: 10,
+                      ),
+                      SizedBox(
+                        width: appPadding / 2,
+                      ),
+                      Text(
+                        'Desktop',
+                        style: TextStyle(
+                          color: textColor.withOpacity(0.5),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.circle,
+                        color: textColor.withOpacity(0.2),
+                        size: 10,
+                      ),
+                      SizedBox(
+                        width: appPadding / 2,
+                      ),
+                      Text(
+                        'Mobile',
+                        style: TextStyle(
+                          color: textColor.withOpacity(0.5),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
