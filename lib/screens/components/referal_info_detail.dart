@@ -30,7 +30,7 @@ class ReferalInfoDetail extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: appPadding),
+              padding: EdgeInsets.symmetric(horizontal: appPadding),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
