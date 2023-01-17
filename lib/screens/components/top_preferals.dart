@@ -38,6 +38,26 @@ class TopPreferals extends StatelessWidget {
                   fontSize: 13,
                   fontWeight: FontWeight.bold,
                   color: textColor.withOpacity(0.5),
+                Text(
+                  'View All',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: textColor.withOpacity(0.5),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: appPadding,
+            ),
+            Expanded(
+              child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: referalData.length,
+                itemBuilder: (context, index) => ReferalInfoDetail(
+                  info: referalData[index],
                 ),
               ),
             ],
