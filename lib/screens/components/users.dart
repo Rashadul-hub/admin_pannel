@@ -29,9 +29,9 @@ class Users extends StatelessWidget {
                 color: textColor,
               ),
             ),
-          ),
-          Expanded(child: BarChartUsers())
-        ],
+            Expanded(child: BarChartUsers())
+          ],
+        ),
       ),
     );
   }
