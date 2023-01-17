@@ -27,11 +27,11 @@ class Viewers extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-          ),
-          Expanded(
-            child: ViewLineChart(),
-          )
-        ],
+            Expanded(
+              child: ViewLineChart(),
+            )
+          ],
+        ),
       ),
     );
   }
