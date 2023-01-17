@@ -24,80 +24,94 @@ class DashboardContent extends StatelessWidget {
           SizedBox(
             height: appPadding,
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Column(
             children: [
-              Expanded(
-                flex: 5,
-                child: Column(
-                  children: [
-                    AnalyticCards(),
-                    SizedBox(
-                      height: appPadding,
-                    ),
-                    Users(),
-                    if (Responsive.isMobile(context))
-                      SizedBox(
-                        height: appPadding,
-                      ),
-                    if (Responsive.isMobile(context)) Discussions(),
-                  ],
-                ),
-              ),
-              if (!Responsive.isMobile(context))
-                SizedBox(
-                  width: appPadding,
-                ),
-              if (!Responsive.isMobile(context))
-                Expanded(
-                  flex: 2,
-                  child: Discussions(),
-                ),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 5,
-                child: Column(
-                  children: [
-                    Row(
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 5,
+                    child: Column(
                       children: [
-                        Expanded(
-                          child: TopPreferals(),
-                          flex: 2,
+                        AnalyticCards(),
+                        SizedBox(
+                          height: appPadding,
                         ),
+                        Users(),
+                        if (Responsive.isMobile(context))
+                          SizedBox(
+                            height: appPadding,
+                          ),
+                        if (Responsive.isMobile(context)) Discussions(),
+                      ],
+                    ),
+                  ),
+                  if (!Responsive.isMobile(context))
+                    SizedBox(
+                      width: appPadding,
+                    ),
+                  if (!Responsive.isMobile(context))
+                    Expanded(
+                      flex: 2,
+                      child: Discussions(),
+                    ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 5,
+                    child: Column(
+                      children: [
                         SizedBox(
                           width: appPadding,
                         ),
-                        Expanded(
-                          child: Viewers(),
-                          flex: 3,
+                        Row(
+                          children: [
+                            if (!Responsive.isMobile(context))
+                              Expanded(
+                                child: TopPreferals(),
+                                flex: 2,
+                              ),
+                            if (Responsive.isMobile(context))
+                              SizedBox(
+                                width: appPadding,
+                              ),
+                            Expanded(
+                              child: Viewers(),
+                              flex: 3,
+                            ),
+                          ],
+                          crossAxisAlignment: CrossAxisAlignment.start,
                         ),
+                        SizedBox(
+                          height: appPadding,
+                        ),
+                        if (Responsive.isMobile(context))
+                          SizedBox(
+                            height: appPadding,
+                          ),
+                        if (Responsive.isMobile(context)) TopPreferals(),
+                        if (Responsive.isMobile(context))
+                          SizedBox(
+                            height: appPadding,
+                          ),
+                        if (Responsive.isMobile(context)) UsersByDevice(),
                       ],
-                      crossAxisAlignment: CrossAxisAlignment.start,
                     ),
+                  ),
+                  if (!Responsive.isMobile(context))
                     SizedBox(
-                      height: appPadding,
+                      width: appPadding,
                     ),
-                    if (Responsive.isMobile(context))
-                      SizedBox(
-                        height: appPadding,
-                      ),
-                    if (Responsive.isMobile(context)) Discussions(),
-                  ],
-                ),
+                  if (!Responsive.isMobile(context))
+                    Expanded(
+                      flex: 2,
+                      child: UsersByDevice(),
+                    ),
+                ],
               ),
-              if (!Responsive.isMobile(context))
-                SizedBox(
-                  width: appPadding,
-                ),
-              if (!Responsive.isMobile(context))
-                Expanded(
-                  flex: 2,
-                  child: UsersByDevice(),
-                ),
             ],
           ),
         ],
