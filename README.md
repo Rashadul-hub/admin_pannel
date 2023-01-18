@@ -1,5 +1,7 @@
 # admin_pannel
  Responsive Admin Panel
+ 
+ Use the following Dependencies & SDK to pubspec.yaml
 
 # ScreenShots
  Web View
@@ -14,8 +16,11 @@
 
  ![img_3.png](img_3.png)  ![img_4.png](img_4.png)  ![img_5.png](img_5.png)
 
- 
-# enviroment
+
+# Version 
+ version: 1.0.0+1
+
+# environment
  environment:
 
  sdk: ">=2.12.5 <3.0.0"
@@ -33,3 +38,4 @@
 
  data_table_2: ^2.0.3
  
+
